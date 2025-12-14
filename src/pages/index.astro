@@ -76,10 +76,7 @@ const rows = [
                   <th data-offer-id={offer.id} class={`draggable ${offer.hidden ? 'hidden-offer hidden-collapse' : ''} ${offer.favorite ? 'favorite-offer' : ''}`} draggable="true">
                     <div class="cell-heading">
                       {logo && <img class="logo-inline" src={logo} alt="Logo" loading="lazy" />}
-                      <div>
-                        <div class="strong">{offer.modelo}</div>
-                        <div class="muted">{offer.source?.name || ''}</div>
-                      </div>
+                      <div class="strong">{offer.modelo}</div>
                     </div>
                   </th>
                 );
