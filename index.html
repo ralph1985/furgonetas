@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestor de ofertas | Furgoneta</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f5ff;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --accent: #5b21b6;
+      --accent-soft: #ede9fe;
+      --line: #e5e7eb;
+      --warn: #b45309;
+      --success: #15803d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 20% 20%, #eef2ff, #f9fafb 50%),
+                  radial-gradient(circle at 80% 0%, #e0f2fe, transparent 40%),
+                  var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    header {
+      padding: 24px 28px 12px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.4rem;
+      letter-spacing: -0.01em;
+    }
+    .hint {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .summary {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 0 28px 16px;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    main {
+      padding: 0 20px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 12px 30px rgba(31, 41, 55, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .card h2 {
+      margin: 0;
+      font-size: 1.1rem;
+      letter-spacing: -0.01em;
+    }
+    .meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .section-title {
+      margin: 4px 0 0;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--muted);
+      letter-spacing: -0.01em;
+    }
+    .list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 12px;
+      font-size: 0.96rem;
+    }
+    .list span {
+      color: var(--muted);
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .badge.success { background: #ecfdf3; color: var(--success); }
+    .badge.warn { background: #fff7ed; color: var(--warn); }
+    ul {
+      padding-left: 18px;
+      margin: 6px 0;
+      color: var(--muted);
+    }
+    .note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    .pill {
+      background: #e0f2fe;
+      color: #075985;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .error {
+      margin: 0 20px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: #fef2f2;
+      color: #991b1b;
+      border: 1px solid #fecdd3;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    @media (max-width: 640px) {
+      header { padding: 20px 16px 10px; }
+      .summary { padding: 0 16px 12px; }
+      main { padding: 0 14px 28px; }
+      .list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Gestor de ofertas de furgoneta</h1>
+      <p class="hint">Fuente de datos: <code>data/offers.json</code> (dentro de este proyecto). Si ves error de carga, sirve esta carpeta con <code>python3 -m http.server</code> y abre <code>index.html</code>.</p>
+    </div>
+  </header>
+  <section class="summary">
+    <div class="chip">Ofertas cargadas: <span id="count">0</span></div>
+    <div class="chip">Pendientes de confirmar: <span id="pending">0</span></div>
+  </section>
+  <main>
+    <p class="error" id="error" style="display:none"></p>
+    <div class="grid" id="grid"></div>
+  </main>
+
+  <script>
+    const DATA_URL = './data/offers.json';
+    const euro = (n) => typeof n === 'number' ? n.toLocaleString('es-ES', { style: 'currency', currency: 'EUR' }) : '—';
+
+    const statusBadge = (status) => {
+      const map = {
+        revisado: { cls: 'success', text: 'revisado' },
+        'pendiente_confirmar': { cls: 'warn', text: 'pendiente confirmar' }
+      };
+      const meta = map[status] || map['pendiente_confirmar'];
+      return `<span class="badge ${meta.cls}">${meta.text}</span>`;
+    };
+
+    const renderOptions = (opts = []) => opts.map(o => `<li>${o.nombre}: <strong>${euro(o.precio)}</strong></li>`).join('') || '<li>Sin opciones</li>';
+
+    const renderCard = (o) => `
+      <article class="card">
+        <div class="meta">
+          ${statusBadge(o.reviewStatus)}
+          <span class="pill">${o.modelo}</span>
+          <span class="pill">${o.motorizacion} · ${o.cambio}</span>
+        </div>
+        <h2>${o.acabatetapiceria}</h2>
+        <div class="meta">
+          <span>${o.color}</span>
+          <span>Km: ${o.kms ?? '—'}</span>
+          <span>Entrega: ${o.entrega || '—'}</span>
+        </div>
+        <p class="section-title">Precios</p>
+        <div class="list">
+          <span>PVP</span><strong>${euro(o.pvp)}</strong>
+          <span>Descuento</span><strong>${euro(o.descuento)}</strong>
+          <span>Base imponible</span><strong>${euro(o.base_imponible)}</strong>
+          <span>IVA</span><strong>${euro(o.iva)}</strong>
+          <span>Matriculación</span><strong>${euro(o.matriculacion)}</strong>
+          <span>IEM</span><strong>${euro(o.iem)}</strong>
+          <span>Otros costes</span><strong>${euro(o.otros_costes)}</strong>
+          <span>Total contado</span><strong>${euro(o.total_contado)}</strong>
+        </div>
+        <p class="section-title">Opciones</p>
+        <ul>${renderOptions(o.opciones)}</ul>
+        <p class="section-title">Contacto</p>
+        <div class="meta">
+          <span>${o.fuente}</span>
+          <span>${o.concesionario}</span>
+          <span>${o.contacto?.nombre || ''}</span>
+          <span>${o.contacto?.telefono || ''}</span>
+          <span><a href="mailto:${o.contacto?.email || ''}">${o.contacto?.email || ''}</a></span>
+        </div>
+        <p class="note">Notas: ${o.notas || '—'}</p>
+        <p class="note">Foto: <code>${o.foto}</code></p>
+      </article>
+    `;
+
+    async function load() {
+      const errorEl = document.getElementById('error');
+      try {
+        const res = await fetch(DATA_URL);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const offers = await res.json();
+        document.getElementById('count').textContent = offers.length;
+        document.getElementById('pending').textContent = offers.filter(o => o.reviewStatus !== 'revisado').length;
+        document.getElementById('grid').innerHTML = offers.map(renderCard).join('');
+      } catch (err) {
+        errorEl.style.display = 'block';
+        errorEl.textContent = `No se pudo cargar el JSON (${err.message}). Ejecuta un servidor local, p.ej.: python3 -m http.server`;
+      }
+    }
+
+    load();
+  </script>
+</body>
+</html>

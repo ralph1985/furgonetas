@@ -1,0 +1,32 @@
+---
+import '../styles/global.css';
+import offers from '../../data/offers.json';
+import OfferCard from '../components/OfferCard.astro';
+
+const total = offers.length;
+const pending = offers.filter((o) => o.reviewStatus !== 'revisado').length;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard ofertas | Furgoneta</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Dashboard de ofertas</h1>
+      </div>
+    </header>
+    <section class="summary">
+      <div class="chip">Ofertas: {total}</div>
+      <div class="chip">Pendientes confirmar: {pending}</div>
+    </section>
+    <main>
+      <div class="grid">
+        {offers.map((offer) => <OfferCard offer={offer} />)}
+      </div>
+    </main>
+  </body>
+</html>

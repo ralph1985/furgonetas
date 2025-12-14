@@ -1,0 +1,100 @@
+---
+import type { AstroComponentFactory } from 'astro';
+
+type Option = { nombre: string; precio: number };
+type Contacto = { nombre?: string; telefono?: string; email?: string };
+
+export interface Offer {
+  id: string;
+  fuente: string;
+  concesionario: string;
+  contacto?: Contacto;
+  modelo: string;
+  motorizacion: string;
+  cambio: string;
+  acabatetapiceria: string;
+  color?: string;
+  opciones?: Option[];
+  pvp?: number;
+  descuento?: number;
+  base_imponible?: number;
+  iva?: number;
+  iem?: number | null;
+  total_contado?: number | null;
+  total_financiado?: number | null;
+  matriculacion?: number | null;
+  otros_costes?: number | null;
+  kms?: number | null;
+  entrega?: string;
+  notas?: string;
+  foto?: string;
+  reviewStatus?: string;
+}
+
+export interface Props {
+  offer: Offer;
+}
+
+const euro = (n: number | null | undefined) =>
+  typeof n === 'number' ? n.toLocaleString('es-ES', { style: 'currency', currency: 'EUR' }) : '—';
+
+const badge = (status?: string) => {
+  const map: Record<string, { cls: string; text: string }> = {
+    revisado: { cls: 'success', text: 'revisado' },
+    pendiente_confirmar: { cls: 'warn', text: 'pendiente confirmar' }
+  };
+  return map[status || ''] || map.pendiente_confirmar;
+};
+
+const { offer } = Astro.props;
+const optTotal = (offer.opciones || []).reduce((acc, o) => acc + (o.precio || 0), 0);
+const status = badge(offer.reviewStatus);
+---
+
+<article class="card">
+  <div class="meta">
+    <span class={`badge ${status.cls}`}>{status.text}</span>
+    <span class="pill">{offer.modelo}</span>
+    <span class="pill">{offer.motorizacion} · {offer.cambio}</span>
+  </div>
+  <h2>{offer.acabatetapiceria}</h2>
+  <div class="meta">
+    <span>{offer.color || 'Color por confirmar'}</span>
+    <span>Km: {offer.kms ?? '—'}</span>
+    <span>Entrega: {offer.entrega || '—'}</span>
+  </div>
+
+  <p class="section-title">Precios</p>
+  <div class="list">
+    <span>PVP</span><strong>{euro(offer.pvp)}</strong>
+    <span>Descuento</span><strong>{euro(offer.descuento)}</strong>
+    <span>Base imponible</span><strong>{euro(offer.base_imponible)}</strong>
+    <span>IVA</span><strong>{euro(offer.iva)}</strong>
+    <span>Matriculación</span><strong>{euro(offer.matriculacion)}</strong>
+    <span>IEM</span><strong>{euro(offer.iem ?? 0)}</strong>
+    <span>Otros costes</span><strong>{euro(offer.otros_costes)}</strong>
+    <span>Total contado</span><strong class="highlight-total">{euro(offer.total_contado)}</strong>
+  </div>
+
+  <p class="section-title">Opciones (total {euro(optTotal)})</p>
+  <ul>
+    {(offer.opciones || []).map((o) => (
+      <li>{o.nombre}: <strong>{euro(o.precio)}</strong></li>
+    ))}
+    {(offer.opciones || []).length === 0 && <li>Sin opciones</li>}
+  </ul>
+
+  <p class="section-title">Contacto</p>
+  <div class="meta">
+    <span>{offer.fuente}</span>
+    <span>{offer.concesionario}</span>
+    {offer.contacto?.nombre && <span>{offer.contacto.nombre}</span>}
+    {offer.contacto?.telefono && <span>{offer.contacto.telefono}</span>}
+    {offer.contacto?.email && (
+      <span><a href={`mailto:${offer.contacto.email}`}>{offer.contacto.email}</a></span>
+    )}
+  </div>
+
+  <p class="note">Notas: {offer.notas || '—'}</p>
+  {offer.foto && <p class="note">Foto: <code>{offer.foto}</code></p>}
+</article>
