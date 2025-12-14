@@ -62,6 +62,7 @@ h1 {
   font-weight: 700;
   font-size: 0.95rem;
 }
+.chip.warn { background: #fff7ed; color: #b45309; }
 
 main {
   padding: 0 16px 40px;
