@@ -29,7 +29,9 @@ const rows = [
   { id: 'mat', label: 'Matriculación' },
   { id: 'otros', label: 'Otros' },
   { id: 'concesionario', label: 'Concesionario' },
-  { id: 'ciudad', label: 'Ciudad / Enlace' }
+  { id: 'ciudad', label: 'Ciudad' },
+  { id: 'mantenimiento', label: 'Mantenimiento / revisiones' },
+  { id: 'enlace', label: 'Enlace anuncio' }
 ];
 ---
 
@@ -105,15 +107,19 @@ const rows = [
                     {row.id === 'concesionario' && (
                       <div>
                         <div>{offer.concesionario || '—'}</div>
-                        <div class="muted">{offer.meta?.mantenimiento || ''}</div>
                       </div>
                     )}
                     {row.id === 'ciudad' && (
                       <div>
                         <div>{offer.meta?.ciudad || '—'}</div>
-                        {offer.meta?.enlace && (
-                          <div><a href={offer.meta.enlace} target="_blank">Ver anuncio</a></div>
-                        )}
+                      </div>
+                    )}
+                    {row.id === 'mantenimiento' && (
+                      <div>{offer.meta?.mantenimiento || '—'}</div>
+                    )}
+                    {row.id === 'enlace' && (
+                      <div>
+                        {offer.meta?.enlace ? <a href={offer.meta.enlace} target="_blank">Ver anuncio</a> : '—'}
                       </div>
                     )}
                   </td>
