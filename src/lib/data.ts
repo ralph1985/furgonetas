@@ -1,8 +1,5 @@
-import rawOffers from '../../data/offers.json';
-import rawDealers from '../../data/dealers.json';
-import rawBrands from '../../data/brands.json';
-import rawSources from '../../data/sources.json';
-import hidden from '../../data/hidden.json';
+import { promises as fs } from 'fs';
+import path from 'path';
 
 export type Dealer = {
   id: string;
@@ -58,20 +55,34 @@ export type OfferWithRefs = Offer & {
   dealer?: Dealer;
   brand?: Brand;
   source?: Source;
+  hidden?: boolean;
 };
 
-const dealerById = new Map<string, Dealer>(rawDealers.map((d) => [d.id, d]));
-const brandById = new Map<string, Brand>(rawBrands.map((b) => [b.id, b]));
-const sourceById = new Map<string, Source>(rawSources.map((s) => [s.id, s]));
+async function readJSON<T>(relative: string): Promise<T> {
+  const filePath = path.resolve(relative);
+  const raw = await fs.readFile(filePath, 'utf-8');
+  return JSON.parse(raw) as T;
+}
 
-export function getOffers(): OfferWithRefs[] {
-  const hiddenSet = new Set<string>(hidden as string[]);
-  return rawOffers
-    .filter((o) => !hiddenSet.has(o.id))
-    .map((offer) => ({
-      ...offer,
-      dealer: dealerById.get(offer.dealerId),
-      brand: brandById.get(offer.brandId),
-      source: sourceById.get(offer.sourceId)
-    }));
+export async function getOffers(): Promise<OfferWithRefs[]> {
+  const [offers, dealers, brands, sources, hidden] = await Promise.all([
+    readJSON<Offer[]>('data/offers.json'),
+    readJSON<Dealer[]>('data/dealers.json'),
+    readJSON<Brand[]>('data/brands.json'),
+    readJSON<Source[]>('data/sources.json'),
+    readJSON<string[]>('data/hidden.json').catch(() => [])
+  ]);
+
+  const dealerById = new Map<string, Dealer>(dealers.map((d) => [d.id, d]));
+  const brandById = new Map<string, Brand>(brands.map((b) => [b.id, b]));
+  const sourceById = new Map<string, Source>(sources.map((s) => [s.id, s]));
+  const hiddenSet = new Set<string>(hidden);
+
+  return offers.map((offer) => ({
+    ...offer,
+    dealer: dealerById.get(offer.dealerId),
+    brand: brandById.get(offer.brandId),
+    source: sourceById.get(offer.sourceId),
+    hidden: hiddenSet.has(offer.id)
+  }));
 }

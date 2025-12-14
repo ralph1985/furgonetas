@@ -2,8 +2,9 @@
 import '../styles/global.css';
 import { getOffers } from '../lib/data';
 
-const offers = getOffers();
+const offers = await getOffers();
 const total = offers.length;
+const hiddenCount = offers.filter((o) => o.hidden).length;
 
 const euro = (n?: number | null) =>
   typeof n === 'number' ? n.toLocaleString('es-ES', { style: 'currency', currency: 'EUR' }) : '—';
@@ -43,6 +44,7 @@ const rows = [
     </header>
     <section class="summary">
       <div class="chip">Ofertas: {total}</div>
+      <button id="toggleHidden" class="chip-btn">Mostrar ocultas</button>
     </section>
     <main>
       <div class="table-wrap vertical">
@@ -53,7 +55,7 @@ const rows = [
               {offers.map((offer) => {
                 const logo = offer.brand?.logo;
                 return (
-                  <th data-offer-id={offer.id}>
+                  <th data-offer-id={offer.id} class={offer.hidden ? 'hidden-offer hidden-collapse' : ''}>
                     <div class="cell-heading">
                       {logo && <img class="logo-inline" src={logo} alt="Logo" loading="lazy" />}
                       <div>
@@ -71,7 +73,7 @@ const rows = [
               <tr>
                 <th class="row-label">{row.label}</th>
                 {offers.map((offer) => (
-                  <td class={`cell ${row.id === 'total' ? 'price total' : row.id === 'pvp' || row.id === 'descuento' || row.id === 'base' || row.id === 'iva' || row.id === 'mat' || row.id === 'otros' ? 'price' : ''}`}>
+                  <td data-offer-id={offer.id} class={`cell ${offer.hidden ? 'hidden-offer hidden-collapse' : ''} ${row.id === 'total' ? 'price total' : row.id === 'pvp' || row.id === 'descuento' || row.id === 'base' || row.id === 'iva' || row.id === 'mat' || row.id === 'otros' ? 'price' : ''}`}>
                     {row.id === 'marca' && (
                       <div>
                         <div class="strong">{offer.modelo}</div>
@@ -133,7 +135,24 @@ const rows = [
         const res = await fetch('/api/hidden');
         const data = await res.json().catch(() => ({ hidden: [] }));
         const hidden = new Set(data.hidden || []);
-        document.querySelectorAll('th[data-offer-id]').forEach((th, idx) => {
+        const toggleBtn = document.getElementById('toggleHidden');
+        let showHidden = false;
+
+        const applyHidden = () => {
+          document.querySelectorAll('[data-offer-id]').forEach((el) => {
+            const id = el.getAttribute('data-offer-id');
+            if (!id) return;
+            if (hidden.has(id)) {
+              el.classList.add('hidden-offer');
+              el.classList.toggle('hidden-collapse', !showHidden);
+            } else {
+              el.classList.remove('hidden-offer', 'hidden-collapse');
+            }
+          });
+          toggleBtn.textContent = showHidden ? 'Ocultar ocultas' : 'Mostrar ocultas';
+        };
+
+        document.querySelectorAll('th[data-offer-id]').forEach((th) => {
           const id = th.getAttribute('data-offer-id');
           if (!id) return;
           const btn = document.createElement('button');
@@ -149,6 +168,13 @@ const rows = [
           };
           th.appendChild(btn);
         });
+
+        toggleBtn.onclick = () => {
+          showHidden = !showHidden;
+          applyHidden();
+        };
+
+        applyHidden();
       })();
     </script>
   </body>
