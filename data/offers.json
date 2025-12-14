@@ -440,5 +440,46 @@
     "foto": "projects/furgoneta/tmp/images/toyota/",
     "contacto": {},
     "potencia_cv": 102
+  },
+  {
+    "id": "peugeot-rifter-allure-100-manual-concesionario",
+    "dealerId": "peugeot-autos-velasco-leganes",
+    "sourceId": "concesionario",
+    "brandId": "peugeot",
+    "modelo": "Peugeot Rifter",
+    "motorizacion": "BlueHDi 100 S&S",
+    "cambio": "Manual 6v",
+    "acabatetapiceria": "Allure · L1 M&S Standard",
+    "color": null,
+    "kms": 0,
+    "pvp": 26482.51,
+    "descuento": 4223.72,
+    "base_imponible": 19515.35,
+    "iva": 4098.22,
+    "iem": 0,
+    "total_contado": 26537.57,
+    "total_financiado": null,
+    "matriculacion": 657.06,
+    "otros_costes": null,
+    "opciones": [
+      {
+        "nombre": "Opciones según oferta (ver foto)",
+        "precio": 1329.29
+      }
+    ],
+    "mantenimiento": null,
+    "enlace": null,
+    "notas": "Datos transcritos de la foto del concesionario (Autos Velasco Leganés). Revisar desglose de IVA/total y opciones exactas en la oferta original.",
+    "etiqueta": null,
+    "consumo_l_100": null,
+    "ruedas": null,
+    "caracteristicas": "Entrega estimada 15/12/2025; revisar emisiones CO2 y consumo en ficha.",
+    "foto": "projects/furgoneta/tmp/images/peugeot/20251214_191131249_iOS.jpg",
+    "contacto": {
+      "nombre": null,
+      "telefono": null,
+      "email": null
+    },
+    "potencia_cv": 100
   }
 ]

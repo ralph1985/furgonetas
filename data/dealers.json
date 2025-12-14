@@ -80,6 +80,16 @@
     "web": ""
   },
   {
+    "id": "peugeot-autos-velasco-leganes",
+    "name": "Autos Velasco, S.L. (Peugeot)",
+    "city": "Leganés",
+    "sourceId": "concesionario",
+    "telefono": "",
+    "email": "",
+    "direccion": "Av. Carlos Sainz, 1, 28914 Leganés, Madrid, España",
+    "web": "https://www.autosvelasco.com/"
+  },
+  {
     "id": "autos-velasco-citroen-madrid",
     "name": "Autos Velasco, S.L. (Citroën)",
     "city": "Leganés",
