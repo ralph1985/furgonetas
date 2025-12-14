@@ -1,56 +1,92 @@
 [
   {
-    "id": "autos-velasco-s-l",
-    "name": "Autos Velasco, S.L.",
-    "city": "",
-    "sourceId": "concesionario"
-  },
-  {
     "id": "peugeot-stellantis-you-mostoles-fuensanta",
-    "name": "Peugeot Stellantis & You Móstoles Fuensanta",
+    "name": "Peugeot Stellantis &You Móstoles - P. Fuensanta",
     "city": "Móstoles",
-    "sourceId": "carwow"
+    "sourceId": "concesionario",
+    "telefono": "916450710",
+    "email": "",
+    "direccion": "Av. de la Reguera, 30, 28936 Móstoles, Madrid, España",
+    "web": "https://www.stellantisandyou.com/es/nuestros-concesionarios/peugeot-stellantis-you-mostoles-p-fuensanta-5072/"
   },
   {
-    "id": "peugeot-alcala-534",
+    "id": "peugeot-alcala-534-coslada",
     "name": "Peugeot Alcalá 534",
     "city": "Coslada",
-    "sourceId": "carwow"
+    "sourceId": "concesionario",
+    "telefono": "916697776",
+    "email": "alcala534coslada@alcala534coslada.redpeugeot.com",
+    "direccion": "Av. de José Gárate, 5 c/v C/ Alcarria, 1, 28823 Coslada, Madrid, España",
+    "web": "https://peugeot.a534.es/"
   },
   {
-    "id": "peugeot-mosancar",
+    "id": "peugeot-mosancar-collado-villalba",
     "name": "Peugeot Mosancar",
     "city": "Collado Villalba",
-    "sourceId": "carwow"
+    "sourceId": "concesionario",
+    "telefono": "918501120",
+    "email": "mosancar@mosancar.com",
+    "direccion": "Vía de Servicio A-6, 19, 28400 Collado Villalba, Madrid, España",
+    "web": "https://www.mosancar.com/"
   },
   {
-    "id": "citroen-alcala-534",
+    "id": "citroen-alcala-534-torrejon-de-ardoz",
     "name": "Citroën Alcalá 534",
     "city": "Torrejón de Ardoz",
-    "sourceId": "carwow"
+    "sourceId": "concesionario",
+    "telefono": "",
+    "email": "",
+    "direccion": "C. de Torrejón, 13, 28850 Torrejón de Ardoz, Madrid, España",
+    "web": ""
   },
   {
-    "id": "opel-ferciauto",
+    "id": "opel-ferciauto-colmenar-viejo",
     "name": "Opel Ferciauto",
     "city": "Colmenar Viejo",
-    "sourceId": "carwow"
+    "sourceId": "concesionario",
+    "telefono": "916286406",
+    "email": "ventas@ferciauto.com",
+    "direccion": "C. Madroño, 4, 28770 Colmenar Viejo, Madrid, España",
+    "web": "https://www.fercigroup.com/concesionarios/ferciauto-concesionario-opel-jeep/"
   },
   {
-    "id": "opel-mosancar",
+    "id": "opel-mosancar-collado-villalba",
     "name": "Opel Mosancar",
-    "city": "Collado de Villalba",
-    "sourceId": "carwow"
+    "city": "Collado Villalba",
+    "sourceId": "concesionario",
+    "telefono": "918501120",
+    "email": "mosancar@mosancar.com",
+    "direccion": "Vía de Servicio A-6, 19, 28400 Collado Villalba, Madrid, España",
+    "web": "https://www.mosancar.com/"
   },
   {
-    "id": "opel-auracar-automoviles",
+    "id": "opel-auracar-automoviles-guadalajara",
     "name": "Opel Auracar Automóviles",
     "city": "Guadalajara",
-    "sourceId": "carwow"
+    "sourceId": "concesionario",
+    "telefono": "",
+    "email": "",
+    "direccion": "C. Méjico, 20, 19004 Guadalajara, España",
+    "web": "https://redoficial.opel.es/auracar/"
   },
   {
-    "id": "toyota-hersamotor",
+    "id": "toyota-hersamotor-coslada",
     "name": "Toyota Hersamotor",
     "city": "Coslada",
-    "sourceId": "carwow"
+    "sourceId": "concesionario",
+    "telefono": "",
+    "email": "",
+    "direccion": "C. de Eduardo Torroja, 2, 28823 Coslada, Madrid, España",
+    "web": ""
+  },
+  {
+    "id": "autos-velasco-citroen-madrid",
+    "name": "Autos Velasco, S.L. (Citroën)",
+    "city": "Leganés",
+    "sourceId": "concesionario",
+    "telefono": "",
+    "email": "",
+    "direccion": "Av. Carlos Sainz, 1, 28914 Leganés, Madrid, España",
+    "web": "https://www.autosvelasco.com/"
   }
 ]

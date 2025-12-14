@@ -246,6 +246,12 @@ thead th:first-child {
 .strong { font-weight: 800; }
 .muted { color: var(--muted); font-size: 0.9rem; }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .card h2 {
   margin: 0;
   font-size: 1.15rem;

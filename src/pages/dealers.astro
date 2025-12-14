@@ -2,8 +2,19 @@
 import '../styles/global.css';
 import dealers from '../../data/dealers.json';
 import sources from '../../data/sources.json';
+import { getOffers } from '../lib/data';
 
 const sourceById = new Map(sources.map((s) => [s.id, s.name]));
+const offers = await getOffers();
+const stats = new Map<string, { count: number; contacto?: { nombre?: string; telefono?: string; email?: string } }>();
+offers.forEach((o) => {
+  const entry = stats.get(o.dealerId) || { count: 0 };
+  entry.count += 1;
+  if (!entry.contacto && o.contacto && (o.contacto.telefono || o.contacto.email || o.contacto.nombre)) {
+    entry.contacto = o.contacto;
+  }
+  stats.set(o.dealerId, entry);
+});
 ---
 
 <html lang="es">
@@ -30,6 +41,8 @@ const sourceById = new Map(sources.map((s) => [s.id, s.name]));
               <th>Concesionario</th>
               <th>Ciudad</th>
               <th>Fuente</th>
+              <th>Ofertas</th>
+              <th>Contacto</th>
             </tr>
           </thead>
           <tbody>
@@ -38,6 +51,18 @@ const sourceById = new Map(sources.map((s) => [s.id, s.name]));
                 <td>{d.name}</td>
                 <td>{d.city || '—'}</td>
                 <td>{sourceById.get(d.sourceId) || d.sourceId}</td>
+                <td>{stats.get(d.id)?.count ?? 0}</td>
+                <td>
+                  {stats.get(d.id)?.contacto ? (
+                    <div class="contact">
+                      {stats.get(d.id)?.contacto?.nombre && <div>{stats.get(d.id)?.contacto?.nombre}</div>}
+                      {stats.get(d.id)?.contacto?.telefono && <div>{stats.get(d.id)?.contacto?.telefono}</div>}
+                      {stats.get(d.id)?.contacto?.email && (
+                        <div><a href={`mailto:${stats.get(d.id)?.contacto?.email}`}>{stats.get(d.id)?.contacto?.email}</a></div>
+                      )}
+                    </div>
+                  ) : '—'}
+                </td>
               </tr>
             ))}
           </tbody>

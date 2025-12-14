@@ -1,7 +1,7 @@
 [
   {
     "id": "berlingo-100-6v-plus",
-    "dealerId": "autos-velasco-s-l",
+    "dealerId": "autos-velasco-citroen-madrid",
     "sourceId": "concesionario",
     "brandId": "citroen",
     "modelo": "Berlingo Talla M",
@@ -41,7 +41,7 @@
   },
   {
     "id": "berlingo-130-eat8-max",
-    "dealerId": "autos-velasco-s-l",
+    "dealerId": "autos-velasco-citroen-madrid",
     "sourceId": "concesionario",
     "brandId": "citroen",
     "modelo": "Berlingo Talla M",
@@ -120,7 +120,7 @@
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-2",
-    "dealerId": "peugeot-alcala-534",
+    "dealerId": "peugeot-alcala-534-coslada",
     "sourceId": "carwow",
     "brandId": "peugeot",
     "modelo": "Peugeot Rifter",
@@ -151,7 +151,7 @@
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-3",
-    "dealerId": "peugeot-mosancar",
+    "dealerId": "peugeot-mosancar-collado-villalba",
     "sourceId": "carwow",
     "brandId": "peugeot",
     "modelo": "Peugeot Rifter",
@@ -213,7 +213,7 @@
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-5",
-    "dealerId": "peugeot-alcala-534",
+    "dealerId": "peugeot-alcala-534-coslada",
     "sourceId": "carwow",
     "brandId": "peugeot",
     "modelo": "Peugeot Rifter",
@@ -244,7 +244,7 @@
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-6",
-    "dealerId": "peugeot-mosancar",
+    "dealerId": "peugeot-mosancar-collado-villalba",
     "sourceId": "carwow",
     "brandId": "peugeot",
     "modelo": "Peugeot Rifter",
@@ -275,7 +275,7 @@
   },
   {
     "id": "carwow-citroen-citro-n-berlingo-furgoneta-7",
-    "dealerId": "citroen-alcala-534",
+    "dealerId": "citroen-alcala-534-torrejon-de-ardoz",
     "sourceId": "carwow",
     "brandId": "citroen",
     "modelo": "Citroën Berlingo",
@@ -306,7 +306,7 @@
   },
   {
     "id": "carwow-opel-opel-combo-life-furgoneta-8",
-    "dealerId": "opel-ferciauto",
+    "dealerId": "opel-ferciauto-colmenar-viejo",
     "sourceId": "carwow",
     "brandId": "opel",
     "modelo": "Opel Combo Life",
@@ -337,7 +337,7 @@
   },
   {
     "id": "carwow-opel-opel-combo-life-furgoneta-9",
-    "dealerId": "opel-mosancar",
+    "dealerId": "opel-mosancar-collado-villalba",
     "sourceId": "carwow",
     "brandId": "opel",
     "modelo": "Opel Combo Life",
@@ -368,7 +368,7 @@
   },
   {
     "id": "carwow-opel-opel-combo-life-furgoneta-10",
-    "dealerId": "opel-auracar-automoviles",
+    "dealerId": "opel-auracar-automoviles-guadalajara",
     "sourceId": "carwow",
     "brandId": "opel",
     "modelo": "Opel Combo Life",
@@ -399,7 +399,7 @@
   },
   {
     "id": "carwow-toyota-toyota-proace-city-verso-furgoneta-11",
-    "dealerId": "toyota-hersamotor",
+    "dealerId": "toyota-hersamotor-coslada",
     "sourceId": "carwow",
     "brandId": "toyota",
     "modelo": "Toyota Proace City Verso",
