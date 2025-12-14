@@ -37,7 +37,8 @@
       "nombre": "Julia López",
       "telefono": "+34 91 433 15 00",
       "email": "33020po@velasco.redofcar.com"
-    }
+    },
+    "potencia_cv": 100
   },
   {
     "id": "berlingo-130-eat8-max",
@@ -85,7 +86,8 @@
       "nombre": "Julia López",
       "telefono": "+34 91 433 15 00",
       "email": "33020po@velasco.redofcar.com"
-    }
+    },
+    "potencia_cv": 130
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-1",
@@ -116,7 +118,8 @@
     "ruedas": "16\"; 205mm; índice de velocidad H; índice de carga 92",
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento",
     "foto": "projects/furgoneta/tmp/images/peugeot/",
-    "contacto": {}
+    "contacto": {},
+    "potencia_cv": 100
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-2",
@@ -147,7 +150,8 @@
     "ruedas": "16\"; 205mm; índice de velocidad H; índice de carga 92",
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento",
     "foto": "projects/furgoneta/tmp/images/peugeot/",
-    "contacto": {}
+    "contacto": {},
+    "potencia_cv": 100
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-3",
@@ -178,7 +182,8 @@
     "ruedas": "16\"; 205mm; índice de velocidad H; índice de carga 92",
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento",
     "foto": "projects/furgoneta/tmp/images/peugeot/",
-    "contacto": {}
+    "contacto": {},
+    "potencia_cv": 100
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-4",
@@ -209,7 +214,8 @@
     "ruedas": "16\"; 205mm; índice de velocidad H; índice de carga 92",
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento\nPantalla táctil de infoentretenimiento\nAndroid auto & Carplay Apple\n",
     "foto": "projects/furgoneta/tmp/images/peugeot/",
-    "contacto": {}
+    "contacto": {},
+    "potencia_cv": 130
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-5",
@@ -240,7 +246,8 @@
     "ruedas": "16\"; 205mm; índice de velocidad H; índice de carga 92",
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento\nPantalla táctil de infoentretenimiento\nAndroid auto & Carplay Apple\n",
     "foto": "projects/furgoneta/tmp/images/peugeot/",
-    "contacto": {}
+    "contacto": {},
+    "potencia_cv": 130
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-6",
@@ -271,7 +278,8 @@
     "ruedas": "16\"; 205mm; índice de velocidad H; índice de carga 92",
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento\nPantalla táctil de infoentretenimiento\nAndroid auto & Carplay Apple\n",
     "foto": "projects/furgoneta/tmp/images/peugeot/",
-    "contacto": {}
+    "contacto": {},
+    "potencia_cv": 130
   },
   {
     "id": "carwow-citroen-citro-n-berlingo-furgoneta-7",
@@ -302,7 +310,8 @@
     "ruedas": "16\"; 205mm; índice de velocidad H; índice de carga 92",
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento\nPantalla táctil de infoentretenimiento\nAndroid auto & Carplay Apple\n",
     "foto": "projects/furgoneta/tmp/images/citroen/",
-    "contacto": {}
+    "contacto": {},
+    "potencia_cv": 130
   },
   {
     "id": "carwow-opel-opel-combo-life-furgoneta-8",
@@ -333,7 +342,8 @@
     "ruedas": "16\"; 205mm; índice de velocidad H; índice de carga 92",
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento\nPantalla táctil de infoentretenimiento\n",
     "foto": "projects/furgoneta/tmp/images/opel/",
-    "contacto": {}
+    "contacto": {},
+    "potencia_cv": 100
   },
   {
     "id": "carwow-opel-opel-combo-life-furgoneta-9",
@@ -364,7 +374,8 @@
     "ruedas": "16\"; 205mm; índice de velocidad H; índice de carga 92",
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento\nPantalla táctil de infoentretenimiento\n",
     "foto": "projects/furgoneta/tmp/images/opel/",
-    "contacto": {}
+    "contacto": {},
+    "potencia_cv": 100
   },
   {
     "id": "carwow-opel-opel-combo-life-furgoneta-10",
@@ -395,7 +406,8 @@
     "ruedas": "16\"; 205mm; índice de velocidad H; índice de carga 92",
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento\nPantalla táctil de infoentretenimiento\n",
     "foto": "projects/furgoneta/tmp/images/opel/",
-    "contacto": {}
+    "contacto": {},
+    "potencia_cv": 100
   },
   {
     "id": "carwow-toyota-toyota-proace-city-verso-furgoneta-11",
@@ -426,6 +438,7 @@
     "ruedas": "16\"; 205mm; índice de velocidad H; índice de carga 92",
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento\nPantalla táctil de infoentretenimiento\nEnganche para remolque",
     "foto": "projects/furgoneta/tmp/images/toyota/",
-    "contacto": {}
+    "contacto": {},
+    "potencia_cv": 102
   }
 ]
