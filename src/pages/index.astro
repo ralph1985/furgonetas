@@ -10,8 +10,11 @@ const euro = (n?: number | null) =>
   typeof n === 'number' ? n.toLocaleString('es-ES', { style: 'currency', currency: 'EUR' }) : '—';
 
 const rows = [
+  { id: 'fuente', label: 'Fuente' },
+  { id: 'concesionario', label: 'Concesionario' },
   { id: 'marca', label: 'Marca/Modelo' },
   { id: 'motor', label: 'Motor / Cambio' },
+  { id: 'potencia', label: 'Potencia (CV)' },
   { id: 'acabat', label: 'Acabado' },
   { id: 'color', label: 'Color' },
   { id: 'kms', label: 'Kilómetros' },
@@ -78,7 +81,7 @@ const rows = [
                     {row.id === 'marca' && (
                       <div>
                         <div class="strong">{offer.modelo}</div>
-                        <div class="muted">{offer.dealer?.name || offer.source?.name || ''}</div>
+                        <div class="muted">{offer.dealer?.name || ''}</div>
                       </div>
                     )}
                     {row.id === 'motor' && (
@@ -86,6 +89,9 @@ const rows = [
                         <div class="strong">{offer.motorizacion}</div>
                         <div class="muted">{offer.cambio}</div>
                       </div>
+                    )}
+                    {row.id === 'potencia' && (
+                      <div>{offer.caracteristicas || '—'}</div>
                     )}
                     {row.id === 'acabat' && offer.acabatetapiceria}
                     {row.id === 'color' && (
