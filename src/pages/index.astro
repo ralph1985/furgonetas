@@ -9,6 +9,17 @@ const hiddenCount = offers.filter((o) => o.hidden).length;
 const euro = (n?: number | null) =>
   typeof n === 'number' ? n.toLocaleString('es-ES', { style: 'currency', currency: 'EUR' }) : '—';
 
+const horsepower = (offer) => {
+  if (offer.potencia_cv !== null && offer.potencia_cv !== undefined) {
+    return `${offer.potencia_cv} CV`;
+  }
+  const text = `${offer.motorizacion || ''} ${offer.caracteristicas || ''}`;
+  const matchCv = text.match(/(\\d{2,3})\\s*CV/i);
+  if (matchCv) return `${matchCv[1]} CV`;
+  const matchNum = text.match(/(\\d{2,3})/);
+  return matchNum ? `${matchNum[1]} CV` : '—';
+};
+
 const rows = [
   { id: 'fuente', label: 'Fuente' },
   { id: 'concesionario', label: 'Concesionario' },
@@ -25,8 +36,6 @@ const rows = [
   { id: 'base', label: 'Base' },
   { id: 'mat', label: 'Matriculación' },
   { id: 'otros', label: 'Otros' },
-  { id: 'concesionario', label: 'Concesionario' },
-  { id: 'fuente', label: 'Fuente' },
   { id: 'ciudad', label: 'Ciudad' },
   { id: 'mantenimiento', label: 'Mantenimiento / revisiones' },
   { id: 'enlace', label: 'Enlace anuncio' }
@@ -95,7 +104,7 @@ const rows = [
                       </div>
                     )}
                     {row.id === 'potencia' && (
-                      <div>{offer.caracteristicas || '—'}</div>
+                      <div>{horsepower(offer)}</div>
                     )}
                     {row.id === 'acabat' && offer.acabatetapiceria}
                     {row.id === 'color' && (

@@ -47,6 +47,7 @@ export type Offer = {
   consumo_l_100?: string | number | null;
   ruedas?: string | null;
   caracteristicas?: string | null;
+  potencia_cv?: number | null;
   foto?: string | null;
   contacto?: { nombre?: string; telefono?: string; email?: string };
 };
