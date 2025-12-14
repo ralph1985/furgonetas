@@ -132,12 +132,20 @@ main {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .logo-inline {
   height: 28px;
   flex-shrink: 0;
+}
+
+thead th {
+  border-left: 1px solid var(--line);
+}
+
+thead th:first-child {
+  border-left: none;
 }
 
 .hide-btn {
@@ -158,6 +166,8 @@ main {
 
 .hidden-offer {
   opacity: 0.35;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: scale(0.99);
 }
 
 .hidden-collapse {
