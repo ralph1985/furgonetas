@@ -6,14 +6,14 @@
     "sourceId": "concesionario"
   },
   {
-    "id": "peugeot-stellanits-you-m-stoles-fuensanta",
-    "name": "Peugeot Stellanits & You Móstoles Fuensanta",
+    "id": "peugeot-stellantis-you-mostoles-fuensanta",
+    "name": "Peugeot Stellantis & You Móstoles Fuensanta",
     "city": "Móstoles",
     "sourceId": "carwow"
   },
   {
-    "id": "peugeot-alcal-534-coslada",
-    "name": "Peugeot Alcalá 534 Coslada",
+    "id": "peugeot-alcala-534",
+    "name": "Peugeot Alcalá 534",
     "city": "Coslada",
     "sourceId": "carwow"
   },
@@ -24,19 +24,7 @@
     "sourceId": "carwow"
   },
   {
-    "id": "peugeot-stellantis-you-m-stoles-fuensanta",
-    "name": "Peugeot Stellantis & You Móstoles Fuensanta",
-    "city": "Móstoles",
-    "sourceId": "carwow"
-  },
-  {
-    "id": "peugeot-alcal-534",
-    "name": "Peugeot Alcalá 534",
-    "city": "Coslada",
-    "sourceId": "carwow"
-  },
-  {
-    "id": "citro-n-alcal-534",
+    "id": "citroen-alcala-534",
     "name": "Citroën Alcalá 534",
     "city": "Torrejón de Ardoz",
     "sourceId": "carwow"
@@ -54,7 +42,7 @@
     "sourceId": "carwow"
   },
   {
-    "id": "opel-auracar-autom-viles",
+    "id": "opel-auracar-automoviles",
     "name": "Opel Auracar Automóviles",
     "city": "Guadalajara",
     "sourceId": "carwow"

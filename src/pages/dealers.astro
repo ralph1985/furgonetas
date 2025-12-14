@@ -1,0 +1,48 @@
+---
+import '../styles/global.css';
+import dealers from '../../data/dealers.json';
+import sources from '../../data/sources.json';
+
+const sourceById = new Map(sources.map((s) => [s.id, s.name]));
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Concesionarios | Furgonetas</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Concesionarios</h1>
+      </div>
+      <nav class="nav">
+        <a href="/">Ofertas</a>
+        <a href="/dealers" class="active">Concesionarios</a>
+      </nav>
+    </header>
+    <main>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Concesionario</th>
+              <th>Ciudad</th>
+              <th>Fuente</th>
+            </tr>
+          </thead>
+          <tbody>
+            {dealers.map((d) => (
+              <tr>
+                <td>{d.name}</td>
+                <td>{d.city || '—'}</td>
+                <td>{sourceById.get(d.sourceId) || d.sourceId}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>

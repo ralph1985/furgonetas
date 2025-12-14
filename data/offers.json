@@ -89,7 +89,7 @@
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-1",
-    "dealerId": "peugeot-stellanits-you-m-stoles-fuensanta",
+    "dealerId": "peugeot-stellantis-you-mostoles-fuensanta",
     "sourceId": "carwow",
     "brandId": "peugeot",
     "modelo": "Peugeot Rifter",
@@ -120,7 +120,7 @@
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-2",
-    "dealerId": "peugeot-alcal-534-coslada",
+    "dealerId": "peugeot-alcala-534",
     "sourceId": "carwow",
     "brandId": "peugeot",
     "modelo": "Peugeot Rifter",
@@ -182,7 +182,7 @@
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-4",
-    "dealerId": "peugeot-stellantis-you-m-stoles-fuensanta",
+    "dealerId": "peugeot-stellantis-you-mostoles-fuensanta",
     "sourceId": "carwow",
     "brandId": "peugeot",
     "modelo": "Peugeot Rifter",
@@ -213,7 +213,7 @@
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-5",
-    "dealerId": "peugeot-alcal-534",
+    "dealerId": "peugeot-alcala-534",
     "sourceId": "carwow",
     "brandId": "peugeot",
     "modelo": "Peugeot Rifter",
@@ -275,7 +275,7 @@
   },
   {
     "id": "carwow-citroen-citro-n-berlingo-furgoneta-7",
-    "dealerId": "citro-n-alcal-534",
+    "dealerId": "citroen-alcala-534",
     "sourceId": "carwow",
     "brandId": "citroen",
     "modelo": "Citroën Berlingo",
@@ -368,7 +368,7 @@
   },
   {
     "id": "carwow-opel-opel-combo-life-furgoneta-10",
-    "dealerId": "opel-auracar-autom-viles",
+    "dealerId": "opel-auracar-automoviles",
     "sourceId": "carwow",
     "brandId": "opel",
     "modelo": "Opel Combo Life",
