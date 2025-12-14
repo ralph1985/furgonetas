@@ -51,6 +51,7 @@ export type Offer = {
   foto?: string | null;
   contacto?: { nombre?: string; telefono?: string; email?: string };
   orden?: number | null;
+  favorite?: boolean;
 };
 
 export type OfferWithRefs = Offer & {
@@ -67,25 +68,28 @@ async function readJSON<T>(relative: string): Promise<T> {
 }
 
 export async function getOffers(): Promise<OfferWithRefs[]> {
-  const [offers, dealers, brands, sources, hidden] = await Promise.all([
+  const [offers, dealers, brands, sources, hidden, favorites] = await Promise.all([
     readJSON<Offer[]>('data/offers.json'),
     readJSON<Dealer[]>('data/dealers.json'),
     readJSON<Brand[]>('data/brands.json'),
     readJSON<Source[]>('data/sources.json'),
-    readJSON<string[]>('data/hidden.json').catch(() => [])
+    readJSON<string[]>('data/hidden.json').catch(() => []),
+    readJSON<string[]>('data/favorites.json').catch(() => [])
   ]);
 
   const dealerById = new Map<string, Dealer>(dealers.map((d) => [d.id, d]));
   const brandById = new Map<string, Brand>(brands.map((b) => [b.id, b]));
   const sourceById = new Map<string, Source>(sources.map((s) => [s.id, s]));
   const hiddenSet = new Set<string>(hidden);
+  const favoriteSet = new Set<string>(favorites);
 
   const withRefs = offers.map((offer) => ({
     ...offer,
     dealer: dealerById.get(offer.dealerId),
     brand: brandById.get(offer.brandId),
     source: sourceById.get(offer.sourceId),
-    hidden: hiddenSet.has(offer.id)
+    hidden: hiddenSet.has(offer.id),
+    favorite: favoriteSet.has(offer.id)
   }));
 
   withRefs.sort((a, b) => {
