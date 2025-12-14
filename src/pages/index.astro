@@ -73,7 +73,7 @@ const rows = [
               {offers.map((offer) => {
                 const logo = offer.brand?.logo;
                 return (
-                  <th data-offer-id={offer.id} class={`draggable ${offer.hidden ? 'hidden-offer hidden-collapse' : ''}`} draggable="true">
+                  <th data-offer-id={offer.id} class={`draggable ${offer.hidden ? 'hidden-offer hidden-collapse' : ''} ${offer.favorite ? 'favorite-offer' : ''}`} draggable="true">
                     <div class="cell-heading">
                       {logo && <img class="logo-inline" src={logo} alt="Logo" loading="lazy" />}
                       <div>
@@ -91,7 +91,7 @@ const rows = [
               <tr>
                 <th class="row-label">{row.label}</th>
                 {offers.map((offer) => (
-                  <td data-offer-id={offer.id} class={`cell ${offer.hidden ? 'hidden-offer hidden-collapse' : ''} ${row.id === 'total' ? 'price total' : row.id === 'pvp' || row.id === 'descuento' || row.id === 'base' || row.id === 'iva' || row.id === 'mat' || row.id === 'otros' ? 'price' : ''}`}>
+                  <td data-offer-id={offer.id} class={`cell ${offer.hidden ? 'hidden-offer hidden-collapse' : ''} ${offer.favorite ? 'favorite-offer' : ''} ${row.id === 'total' ? 'price total' : row.id === 'pvp' || row.id === 'descuento' || row.id === 'base' || row.id === 'iva' || row.id === 'mat' || row.id === 'otros' ? 'price' : ''}`}>
                     {row.id === 'marca' && (
                       <div>
                         <div class="strong">{offer.modelo}</div>
@@ -156,6 +156,9 @@ const rows = [
         const res = await fetch('/api/hidden');
         const data = await res.json().catch(() => ({ hidden: [] }));
         const hidden = new Set(data.hidden || []);
+        const resFav = await fetch('/api/favorites');
+        const favData = await resFav.json().catch(() => []);
+        const favorites = new Set(favData || []);
         const toggleBtn = document.getElementById('toggleHidden');
         let showHidden = false;
 
@@ -176,9 +179,14 @@ const rows = [
         document.querySelectorAll('th[data-offer-id]').forEach((th) => {
           const id = th.getAttribute('data-offer-id');
           if (!id) return;
+          const actions = document.createElement('div');
+          actions.className = 'actions-row';
+
           const btn = document.createElement('button');
-          btn.textContent = hidden.has(id) ? 'Mostrar' : 'Ocultar';
           btn.className = 'hide-btn';
+          const bin = document.createElement('span');
+          bin.textContent = hidden.has(id) ? '↩️' : '🗑️';
+          btn.appendChild(bin);
           btn.onclick = async () => {
             await fetch('/api/hidden', {
               method: 'POST',
@@ -187,7 +195,24 @@ const rows = [
             });
             location.reload();
           };
-          th.appendChild(btn);
+          actions.appendChild(btn);
+
+          const favBtn = document.createElement('button');
+          favBtn.className = 'fav-btn';
+          const star = document.createElement('span');
+          star.textContent = favorites.has(id) ? '★' : '☆';
+          favBtn.appendChild(star);
+          favBtn.onclick = async () => {
+            await fetch('/api/favorites', {
+              method: 'POST',
+              headers: { 'content-type': 'application/json' },
+              body: JSON.stringify({ id, favorite: !favorites.has(id) })
+            });
+            location.reload();
+          };
+          actions.appendChild(favBtn);
+
+          th.appendChild(actions);
         });
 
         toggleBtn.onclick = () => {
