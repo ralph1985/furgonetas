@@ -20,7 +20,8 @@ const rows = [
   { id: 'marca', label: 'Marca/Modelo' },
   { id: 'motor', label: 'Motor / Cambio' },
   { id: 'acabat', label: 'Acabado' },
-  { id: 'color', label: 'Color / Km' },
+  { id: 'color', label: 'Color' },
+  { id: 'kms', label: 'Kilómetros' },
   { id: 'total', label: 'Total contado' },
   { id: 'iva', label: 'IVA' },
   { id: 'pvp', label: 'PVP' },
@@ -29,6 +30,7 @@ const rows = [
   { id: 'mat', label: 'Matriculación' },
   { id: 'otros', label: 'Otros' },
   { id: 'concesionario', label: 'Concesionario' },
+  { id: 'fuente', label: 'Fuente' },
   { id: 'ciudad', label: 'Ciudad' },
   { id: 'mantenimiento', label: 'Mantenimiento / revisiones' },
   { id: 'enlace', label: 'Enlace anuncio' }
@@ -92,10 +94,10 @@ const rows = [
                     )}
                     {row.id === 'acabat' && offer.acabatetapiceria}
                     {row.id === 'color' && (
-                      <div>
-                        <div>{offer.color || '—'}</div>
-                        <div class="muted">Km: {offer.kms ?? '—'}</div>
-                      </div>
+                      <div>{offer.color || '—'}</div>
+                    )}
+                    {row.id === 'kms' && (
+                      <div>{offer.kms ?? '—'}</div>
                     )}
                     {row.id === 'total' && euro(offer.total_contado)}
                     {row.id === 'pvp' && euro(offer.pvp)}
@@ -108,6 +110,9 @@ const rows = [
                       <div>
                         <div>{offer.concesionario || '—'}</div>
                       </div>
+                    )}
+                    {row.id === 'fuente' && (
+                      <div>{offer.fuente || '—'}</div>
                     )}
                     {row.id === 'ciudad' && (
                       <div>
