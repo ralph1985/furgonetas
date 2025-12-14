@@ -38,7 +38,8 @@
       "telefono": "+34 91 433 15 00",
       "email": "33020po@velasco.redofcar.com"
     },
-    "potencia_cv": 100
+    "potencia_cv": 100,
+    "orden": 1
   },
   {
     "id": "berlingo-130-eat8-max",
@@ -87,7 +88,8 @@
       "telefono": "+34 91 433 15 00",
       "email": "33020po@velasco.redofcar.com"
     },
-    "potencia_cv": 130
+    "potencia_cv": 130,
+    "orden": 3
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-1",
@@ -99,13 +101,13 @@
     "cambio": "Manual",
     "acabatetapiceria": "Standard BlueHDi 100 Active Business",
     "color": "Sirkka Green (metalizada)",
-    "kms": 0.0,
-    "pvp": 29404.0,
-    "descuento": 7250.0,
+    "kms": 0,
+    "pvp": 29404,
+    "descuento": 7250,
     "base_imponible": null,
     "iva": null,
     "iem": null,
-    "total_contado": 22154.0,
+    "total_contado": 22154,
     "total_financiado": null,
     "matriculacion": null,
     "otros_costes": null,
@@ -119,7 +121,8 @@
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento",
     "foto": "projects/furgoneta/tmp/images/peugeot/",
     "contacto": {},
-    "potencia_cv": 100
+    "potencia_cv": 100,
+    "orden": 4
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-2",
@@ -131,13 +134,13 @@
     "cambio": "Manual",
     "acabatetapiceria": "Standard BlueHDi 100 Active Business",
     "color": "Sirkka Green (metalizada)",
-    "kms": 0.0,
-    "pvp": 29404.0,
-    "descuento": 6650.0,
+    "kms": 0,
+    "pvp": 29404,
+    "descuento": 6650,
     "base_imponible": null,
     "iva": null,
     "iem": null,
-    "total_contado": 22754.0,
+    "total_contado": 22754,
     "total_financiado": null,
     "matriculacion": null,
     "otros_costes": null,
@@ -151,7 +154,8 @@
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento",
     "foto": "projects/furgoneta/tmp/images/peugeot/",
     "contacto": {},
-    "potencia_cv": 100
+    "potencia_cv": 100,
+    "orden": 5
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-3",
@@ -163,13 +167,13 @@
     "cambio": "Manual",
     "acabatetapiceria": "Standard BlueHDi 100 Active Business",
     "color": "Sirkka Green (metalizada)",
-    "kms": 0.0,
-    "pvp": 29404.0,
-    "descuento": 5685.0,
+    "kms": 0,
+    "pvp": 29404,
+    "descuento": 5685,
     "base_imponible": null,
     "iva": null,
     "iem": null,
-    "total_contado": 23719.0,
+    "total_contado": 23719,
     "total_financiado": null,
     "matriculacion": null,
     "otros_costes": null,
@@ -183,7 +187,8 @@
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento",
     "foto": "projects/furgoneta/tmp/images/peugeot/",
     "contacto": {},
-    "potencia_cv": 100
+    "potencia_cv": 100,
+    "orden": 6
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-4",
@@ -195,13 +200,13 @@
     "cambio": "Manual",
     "acabatetapiceria": "Std. BlueHDi 130 S&S Allure Business",
     "color": "Blanco",
-    "kms": 0.0,
-    "pvp": 32755.0,
-    "descuento": 8026.0,
+    "kms": 0,
+    "pvp": 32755,
+    "descuento": 8026,
     "base_imponible": null,
     "iva": null,
     "iem": null,
-    "total_contado": 24729.0,
+    "total_contado": 24729,
     "total_financiado": null,
     "matriculacion": null,
     "otros_costes": null,
@@ -215,7 +220,8 @@
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento\nPantalla táctil de infoentretenimiento\nAndroid auto & Carplay Apple\n",
     "foto": "projects/furgoneta/tmp/images/peugeot/",
     "contacto": {},
-    "potencia_cv": 130
+    "potencia_cv": 130,
+    "orden": 7
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-5",
@@ -227,13 +233,13 @@
     "cambio": "Manual",
     "acabatetapiceria": "Std. BlueHDi 130 S&S Allure Business",
     "color": "Blanco",
-    "kms": 0.0,
-    "pvp": 32755.0,
-    "descuento": 7426.0,
+    "kms": 0,
+    "pvp": 32755,
+    "descuento": 7426,
     "base_imponible": null,
     "iva": null,
     "iem": null,
-    "total_contado": 25329.0,
+    "total_contado": 25329,
     "total_financiado": null,
     "matriculacion": null,
     "otros_costes": null,
@@ -247,7 +253,8 @@
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento\nPantalla táctil de infoentretenimiento\nAndroid auto & Carplay Apple\n",
     "foto": "projects/furgoneta/tmp/images/peugeot/",
     "contacto": {},
-    "potencia_cv": 130
+    "potencia_cv": 130,
+    "orden": 8
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-6",
@@ -259,13 +266,13 @@
     "cambio": "Manual",
     "acabatetapiceria": "Std. BlueHDi 130 S&S Allure Business",
     "color": "Blanco",
-    "kms": 0.0,
-    "pvp": 32755.0,
-    "descuento": 6352.0,
+    "kms": 0,
+    "pvp": 32755,
+    "descuento": 6352,
     "base_imponible": null,
     "iva": null,
     "iem": null,
-    "total_contado": 26403.0,
+    "total_contado": 26403,
     "total_financiado": null,
     "matriculacion": null,
     "otros_costes": null,
@@ -279,7 +286,8 @@
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento\nPantalla táctil de infoentretenimiento\nAndroid auto & Carplay Apple\n",
     "foto": "projects/furgoneta/tmp/images/peugeot/",
     "contacto": {},
-    "potencia_cv": 130
+    "potencia_cv": 130,
+    "orden": 9
   },
   {
     "id": "carwow-citroen-citro-n-berlingo-furgoneta-7",
@@ -291,13 +299,13 @@
     "cambio": "Automático",
     "acabatetapiceria": "M Diésel 130CV Automático Max",
     "color": "Blanco",
-    "kms": 0.0,
-    "pvp": 36847.0,
-    "descuento": 7271.0,
+    "kms": 0,
+    "pvp": 36847,
+    "descuento": 7271,
     "base_imponible": null,
     "iva": null,
     "iem": null,
-    "total_contado": 29576.0,
+    "total_contado": 29576,
     "total_financiado": null,
     "matriculacion": null,
     "otros_costes": null,
@@ -311,7 +319,8 @@
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento\nPantalla táctil de infoentretenimiento\nAndroid auto & Carplay Apple\n",
     "foto": "projects/furgoneta/tmp/images/citroen/",
     "contacto": {},
-    "potencia_cv": 130
+    "potencia_cv": 130,
+    "orden": 10
   },
   {
     "id": "carwow-opel-opel-combo-life-furgoneta-8",
@@ -323,13 +332,13 @@
     "cambio": "Manual",
     "acabatetapiceria": "Diesel 100 CV",
     "color": "Blanco",
-    "kms": 0.0,
-    "pvp": 31388.0,
-    "descuento": 6457.0,
+    "kms": 0,
+    "pvp": 31388,
+    "descuento": 6457,
     "base_imponible": null,
     "iva": null,
     "iem": null,
-    "total_contado": 24931.0,
+    "total_contado": 24931,
     "total_financiado": null,
     "matriculacion": null,
     "otros_costes": null,
@@ -343,7 +352,8 @@
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento\nPantalla táctil de infoentretenimiento\n",
     "foto": "projects/furgoneta/tmp/images/opel/",
     "contacto": {},
-    "potencia_cv": 100
+    "potencia_cv": 100,
+    "orden": 11
   },
   {
     "id": "carwow-opel-opel-combo-life-furgoneta-9",
@@ -355,13 +365,13 @@
     "cambio": "Manual",
     "acabatetapiceria": "Diesel 100 CV",
     "color": "Blanco",
-    "kms": 0.0,
-    "pvp": 31388.0,
-    "descuento": 6377.0,
+    "kms": 0,
+    "pvp": 31388,
+    "descuento": 6377,
     "base_imponible": null,
     "iva": null,
     "iem": null,
-    "total_contado": 25011.0,
+    "total_contado": 25011,
     "total_financiado": null,
     "matriculacion": null,
     "otros_costes": null,
@@ -375,7 +385,8 @@
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento\nPantalla táctil de infoentretenimiento\n",
     "foto": "projects/furgoneta/tmp/images/opel/",
     "contacto": {},
-    "potencia_cv": 100
+    "potencia_cv": 100,
+    "orden": 12
   },
   {
     "id": "carwow-opel-opel-combo-life-furgoneta-10",
@@ -387,13 +398,13 @@
     "cambio": "Manual",
     "acabatetapiceria": "Diesel 100 CV",
     "color": "Blanco",
-    "kms": 0.0,
-    "pvp": 31388.0,
-    "descuento": 4291.0,
+    "kms": 0,
+    "pvp": 31388,
+    "descuento": 4291,
     "base_imponible": null,
     "iva": null,
     "iem": null,
-    "total_contado": 27097.0,
+    "total_contado": 27097,
     "total_financiado": null,
     "matriculacion": null,
     "otros_costes": null,
@@ -407,7 +418,8 @@
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento\nPantalla táctil de infoentretenimiento\n",
     "foto": "projects/furgoneta/tmp/images/opel/",
     "contacto": {},
-    "potencia_cv": 100
+    "potencia_cv": 100,
+    "orden": 13
   },
   {
     "id": "carwow-toyota-toyota-proace-city-verso-furgoneta-11",
@@ -419,13 +431,13 @@
     "cambio": "Manual",
     "acabatetapiceria": "Diesel 100 CV",
     "color": "Blanco",
-    "kms": 0.0,
-    "pvp": 31657.0,
-    "descuento": 3749.0,
+    "kms": 0,
+    "pvp": 31657,
+    "descuento": 3749,
     "base_imponible": null,
     "iva": null,
     "iem": null,
-    "total_contado": 27908.0,
+    "total_contado": 27908,
     "total_financiado": null,
     "matriculacion": null,
     "otros_costes": null,
@@ -439,7 +451,8 @@
     "caracteristicas": "3 puntos isofix\nClimatizador\nControl de velocidad\nCámara aparcamiento\nSensores de aparcamiento\nPantalla táctil de infoentretenimiento\nEnganche para remolque",
     "foto": "projects/furgoneta/tmp/images/toyota/",
     "contacto": {},
-    "potencia_cv": 102
+    "potencia_cv": 102,
+    "orden": 14
   },
   {
     "id": "peugeot-rifter-allure-100-manual-concesionario",
@@ -480,6 +493,7 @@
       "telefono": null,
       "email": null
     },
-    "potencia_cv": 100
+    "potencia_cv": 100,
+    "orden": 2
   }
 ]

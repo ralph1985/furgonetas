@@ -62,6 +62,7 @@ const rows = [
       <div class="chip">Ofertas: {total}</div>
       <div class="chip warn">Ocultas: {hiddenCount}</div>
       <button id="toggleHidden" class="chip-btn">Mostrar ocultas</button>
+      <div class="drag-hint">Arrastra las columnas para reordenar (se guarda en el JSON).</div>
     </section>
     <main>
       <div class="table-wrap vertical">
@@ -72,7 +73,7 @@ const rows = [
               {offers.map((offer) => {
                 const logo = offer.brand?.logo;
                 return (
-                  <th data-offer-id={offer.id} class={offer.hidden ? 'hidden-offer hidden-collapse' : ''}>
+                  <th data-offer-id={offer.id} class={`draggable ${offer.hidden ? 'hidden-offer hidden-collapse' : ''}`} draggable="true">
                     <div class="cell-heading">
                       {logo && <img class="logo-inline" src={logo} alt="Logo" loading="lazy" />}
                       <div>
@@ -195,6 +196,63 @@ const rows = [
         };
 
         applyHidden();
+
+        // Reordenación por drag & drop
+        let order = Array.from(document.querySelectorAll('th[data-offer-id]')).map((th) =>
+          th.getAttribute('data-offer-id')
+        );
+        const applyOrder = () => {
+          const rows = document.querySelectorAll('.vertical-table tr');
+          rows.forEach((row) => {
+            const firstCell = row.children[0];
+            const cells = Array.from(row.children).slice(1);
+            const map = new Map();
+            cells.forEach((cell) => map.set(cell.getAttribute('data-offer-id'), cell));
+            while (row.children.length > 1) row.removeChild(row.lastElementChild);
+            order.forEach((id) => {
+              const cell = map.get(id);
+              if (cell) row.appendChild(cell);
+            });
+            if (firstCell) row.insertBefore(firstCell, row.firstChild);
+          });
+        };
+
+        let dragId = null;
+        document.querySelectorAll('th[data-offer-id]').forEach((th) => {
+          th.addEventListener('dragstart', (e) => {
+            dragId = th.getAttribute('data-offer-id');
+            th.classList.add('dragging');
+            e.dataTransfer.effectAllowed = 'move';
+          });
+          th.addEventListener('dragend', () => {
+            dragId = null;
+            th.classList.remove('dragging');
+            document.querySelectorAll('.drop-target').forEach((el) => el.classList.remove('drop-target'));
+          });
+          th.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            th.classList.add('drop-target');
+          });
+          th.addEventListener('dragleave', () => {
+            th.classList.remove('drop-target');
+          });
+          th.addEventListener('drop', async (e) => {
+            e.preventDefault();
+            const targetId = th.getAttribute('data-offer-id');
+            if (!dragId || !targetId || dragId === targetId) return;
+            const next = order.filter((x) => x !== dragId);
+            const targetIndex = next.indexOf(targetId);
+            next.splice(targetIndex, 0, dragId);
+            order = next;
+            applyOrder();
+            // Persist order to JSON
+            await fetch('/api/order', {
+              method: 'POST',
+              headers: { 'content-type': 'application/json' },
+              body: JSON.stringify({ order })
+            });
+          });
+        });
       })();
     </script>
   </body>

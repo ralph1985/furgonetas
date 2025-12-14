@@ -50,6 +50,7 @@ export type Offer = {
   potencia_cv?: number | null;
   foto?: string | null;
   contacto?: { nombre?: string; telefono?: string; email?: string };
+  orden?: number | null;
 };
 
 export type OfferWithRefs = Offer & {
@@ -79,11 +80,19 @@ export async function getOffers(): Promise<OfferWithRefs[]> {
   const sourceById = new Map<string, Source>(sources.map((s) => [s.id, s]));
   const hiddenSet = new Set<string>(hidden);
 
-  return offers.map((offer) => ({
+  const withRefs = offers.map((offer) => ({
     ...offer,
     dealer: dealerById.get(offer.dealerId),
     brand: brandById.get(offer.brandId),
     source: sourceById.get(offer.sourceId),
     hidden: hiddenSet.has(offer.id)
   }));
+
+  withRefs.sort((a, b) => {
+    const ao = a.orden ?? Number.MAX_SAFE_INTEGER;
+    const bo = b.orden ?? Number.MAX_SAFE_INTEGER;
+    return ao - bo;
+  });
+
+  return withRefs;
 }
