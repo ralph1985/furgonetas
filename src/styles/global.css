@@ -97,7 +97,8 @@ main {
 
 .table-wrap.vertical {
   width: 100%;
-  overflow-x: auto;
+  overflow: auto;
+  max-height: 75vh;
   border: 1px solid var(--line);
   border-radius: 12px;
   background: var(--card);
@@ -153,7 +154,7 @@ main {
   color: var(--muted);
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 3;
 }
 
 .vertical-table tbody tr:nth-child(even) {
