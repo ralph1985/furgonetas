@@ -129,12 +129,13 @@ main {
 
 .cell-heading {
   display: flex;
-  gap: 10px;
-  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
 }
 
 .logo-inline {
-  height: 24px;
+  height: 28px;
   flex-shrink: 0;
 }
 
