@@ -139,6 +139,22 @@ main {
   flex-shrink: 0;
 }
 
+.hide-btn {
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #f8fafc;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.hide-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .strong { font-weight: 800; }
 .muted { color: var(--muted); font-size: 0.9rem; }
 

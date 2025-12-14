@@ -53,7 +53,7 @@ const rows = [
               {offers.map((offer) => {
                 const logo = offer.brand?.logo;
                 return (
-                  <th>
+                  <th data-offer-id={offer.id}>
                     <div class="cell-heading">
                       {logo && <img class="logo-inline" src={logo} alt="Logo" loading="lazy" />}
                       <div>
@@ -127,5 +127,29 @@ const rows = [
         </table>
       </div>
     </main>
+
+    <script>
+      (async () => {
+        const res = await fetch('/api/hidden');
+        const data = await res.json().catch(() => ({ hidden: [] }));
+        const hidden = new Set(data.hidden || []);
+        document.querySelectorAll('th[data-offer-id]').forEach((th, idx) => {
+          const id = th.getAttribute('data-offer-id');
+          if (!id) return;
+          const btn = document.createElement('button');
+          btn.textContent = hidden.has(id) ? 'Mostrar' : 'Ocultar';
+          btn.className = 'hide-btn';
+          btn.onclick = async () => {
+            await fetch('/api/hidden', {
+              method: 'POST',
+              headers: { 'content-type': 'application/json' },
+              body: JSON.stringify({ id, hidden: !hidden.has(id) })
+            });
+            location.reload();
+          };
+          th.appendChild(btn);
+        });
+      })();
+    </script>
   </body>
 </html>

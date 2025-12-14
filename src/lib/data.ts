@@ -2,6 +2,7 @@ import rawOffers from '../../data/offers.json';
 import rawDealers from '../../data/dealers.json';
 import rawBrands from '../../data/brands.json';
 import rawSources from '../../data/sources.json';
+import hidden from '../../data/hidden.json';
 
 export type Dealer = {
   id: string;
@@ -64,10 +65,13 @@ const brandById = new Map<string, Brand>(rawBrands.map((b) => [b.id, b]));
 const sourceById = new Map<string, Source>(rawSources.map((s) => [s.id, s]));
 
 export function getOffers(): OfferWithRefs[] {
-  return rawOffers.map((offer) => ({
-    ...offer,
-    dealer: dealerById.get(offer.dealerId),
-    brand: brandById.get(offer.brandId),
-    source: sourceById.get(offer.sourceId)
-  }));
+  const hiddenSet = new Set<string>(hidden as string[]);
+  return rawOffers
+    .filter((o) => !hiddenSet.has(o.id))
+    .map((offer) => ({
+      ...offer,
+      dealer: dealerById.get(offer.dealerId),
+      brand: brandById.get(offer.brandId),
+      source: sourceById.get(offer.sourceId)
+    }));
 }
