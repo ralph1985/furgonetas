@@ -1,20 +1,12 @@
 ---
 import '../styles/global.css';
-import offers from '../../data/offers.json';
+import { getOffers } from '../lib/data';
 
+const offers = getOffers();
 const total = offers.length;
 
 const euro = (n?: number | null) =>
   typeof n === 'number' ? n.toLocaleString('es-ES', { style: 'currency', currency: 'EUR' }) : '—';
-
-const brandLogo = (text: string) => {
-  const t = text.toLowerCase();
-  if (t.includes('citro')) return '/logos/citroen.svg';
-  if (t.includes('peugeot') || t.includes('rifter')) return '/logos/peugeot.svg';
-  if (t.includes('opel')) return '/logos/opel.png';
-  if (t.includes('toyota')) return '/logos/toyota.svg';
-  return '';
-};
 
 const rows = [
   { id: 'marca', label: 'Marca/Modelo' },
@@ -59,14 +51,14 @@ const rows = [
             <tr>
               <th>Dato</th>
               {offers.map((offer) => {
-                const logo = brandLogo(`${offer.modelo || ''} ${offer.concesionario || ''}`);
+                const logo = offer.brand?.logo;
                 return (
                   <th>
                     <div class="cell-heading">
                       {logo && <img class="logo-inline" src={logo} alt="Logo" loading="lazy" />}
                       <div>
                         <div class="strong">{offer.modelo}</div>
-                        <div class="muted">{offer.fuente}</div>
+                        <div class="muted">{offer.source?.name || ''}</div>
                       </div>
                     </div>
                   </th>
@@ -83,7 +75,7 @@ const rows = [
                     {row.id === 'marca' && (
                       <div>
                         <div class="strong">{offer.modelo}</div>
-                        <div class="muted">{offer.concesionario || offer.fuente}</div>
+                        <div class="muted">{offer.dealer?.name || offer.source?.name || ''}</div>
                       </div>
                     )}
                     {row.id === 'motor' && (
@@ -108,23 +100,23 @@ const rows = [
                     {row.id === 'otros' && euro(offer.otros_costes)}
                     {row.id === 'concesionario' && (
                       <div>
-                        <div>{offer.concesionario || '—'}</div>
+                        <div>{offer.dealer?.name || '—'}</div>
                       </div>
                     )}
                     {row.id === 'fuente' && (
-                      <div>{offer.fuente || '—'}</div>
+                      <div>{offer.source?.name || '—'}</div>
                     )}
                     {row.id === 'ciudad' && (
                       <div>
-                        <div>{offer.meta?.ciudad || '—'}</div>
+                        <div>{offer.dealer?.city || '—'}</div>
                       </div>
                     )}
                     {row.id === 'mantenimiento' && (
-                      <div>{offer.meta?.mantenimiento || '—'}</div>
+                      <div>{offer.mantenimiento || '—'}</div>
                     )}
                     {row.id === 'enlace' && (
                       <div>
-                        {offer.meta?.enlace ? <a href={offer.meta.enlace} target="_blank">Ver anuncio</a> : '—'}
+                        {offer.enlace ? <a href={offer.enlace} target="_blank">Ver anuncio</a> : '—'}
                       </div>
                     )}
                   </td>

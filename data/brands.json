@@ -1,0 +1,22 @@
+[
+  {
+    "id": "citroen",
+    "name": "Citroën",
+    "logo": "/logos/citroen.svg"
+  },
+  {
+    "id": "peugeot",
+    "name": "Peugeot",
+    "logo": "/logos/peugeot.svg"
+  },
+  {
+    "id": "opel",
+    "name": "Opel",
+    "logo": "/logos/opel.png"
+  },
+  {
+    "id": "toyota",
+    "name": "Toyota",
+    "logo": "/logos/toyota.svg"
+  }
+]

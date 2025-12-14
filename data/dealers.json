@@ -1,0 +1,68 @@
+[
+  {
+    "id": "autos-velasco-s-l",
+    "name": "Autos Velasco, S.L.",
+    "city": "",
+    "sourceId": "concesionario"
+  },
+  {
+    "id": "peugeot-stellanits-you-m-stoles-fuensanta",
+    "name": "Peugeot Stellanits & You Móstoles Fuensanta",
+    "city": "Móstoles",
+    "sourceId": "carwow"
+  },
+  {
+    "id": "peugeot-alcal-534-coslada",
+    "name": "Peugeot Alcalá 534 Coslada",
+    "city": "Coslada",
+    "sourceId": "carwow"
+  },
+  {
+    "id": "peugeot-mosancar",
+    "name": "Peugeot Mosancar",
+    "city": "Collado Villalba",
+    "sourceId": "carwow"
+  },
+  {
+    "id": "peugeot-stellantis-you-m-stoles-fuensanta",
+    "name": "Peugeot Stellantis & You Móstoles Fuensanta",
+    "city": "Móstoles",
+    "sourceId": "carwow"
+  },
+  {
+    "id": "peugeot-alcal-534",
+    "name": "Peugeot Alcalá 534",
+    "city": "Coslada",
+    "sourceId": "carwow"
+  },
+  {
+    "id": "citro-n-alcal-534",
+    "name": "Citroën Alcalá 534",
+    "city": "Torrejón de Ardoz",
+    "sourceId": "carwow"
+  },
+  {
+    "id": "opel-ferciauto",
+    "name": "Opel Ferciauto",
+    "city": "Colmenar Viejo",
+    "sourceId": "carwow"
+  },
+  {
+    "id": "opel-mosancar",
+    "name": "Opel Mosancar",
+    "city": "Collado de Villalba",
+    "sourceId": "carwow"
+  },
+  {
+    "id": "opel-auracar-autom-viles",
+    "name": "Opel Auracar Automóviles",
+    "city": "Guadalajara",
+    "sourceId": "carwow"
+  },
+  {
+    "id": "toyota-hersamotor",
+    "name": "Toyota Hersamotor",
+    "city": "Coslada",
+    "sourceId": "carwow"
+  }
+]
