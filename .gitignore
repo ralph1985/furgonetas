@@ -1,0 +1,14 @@
+# Dependencias y compilados
+node_modules
+dist
+.astro
+
+# Temporal / cachés
+.DS_Store
+tmp
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
