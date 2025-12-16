@@ -89,7 +89,7 @@
       "email": "33020po@velasco.redofcar.com"
     },
     "potencia_cv": 130,
-    "orden": 2
+    "orden": 4
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-1",
@@ -122,7 +122,7 @@
     "foto": "projects/furgoneta/tmp/images/peugeot/",
     "contacto": {},
     "potencia_cv": 100,
-    "orden": 4
+    "orden": 2
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-2",
