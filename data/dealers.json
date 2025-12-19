@@ -70,6 +70,16 @@
     "web": "https://redoficial.opel.es/auracar/"
   },
   {
+    "id": "peugeot-auracar-automoviles-guadalajara",
+    "name": "Peugeot Auracar Automóviles",
+    "city": "Guadalajara",
+    "sourceId": "concesionario",
+    "telefono": "949200350",
+    "email": "peugeot@auracar.es",
+    "direccion": "C/ Méjico, 20, 19004 Guadalajara, España",
+    "web": ""
+  },
+  {
     "id": "toyota-hersamotor-coslada",
     "name": "Toyota Hersamotor",
     "city": "Coslada",

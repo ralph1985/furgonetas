@@ -39,7 +39,7 @@
       "email": "33020po@velasco.redofcar.com"
     },
     "potencia_cv": 100,
-    "orden": 1
+    "orden": 2
   },
   {
     "id": "berlingo-130-eat8-max",
@@ -89,7 +89,7 @@
       "email": "33020po@velasco.redofcar.com"
     },
     "potencia_cv": 130,
-    "orden": 4
+    "orden": 5
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-1",
@@ -122,7 +122,7 @@
     "foto": "projects/furgoneta/tmp/images/peugeot/",
     "contacto": {},
     "potencia_cv": 100,
-    "orden": 2
+    "orden": 3
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-2",
@@ -155,7 +155,7 @@
     "foto": "projects/furgoneta/tmp/images/peugeot/",
     "contacto": {},
     "potencia_cv": 100,
-    "orden": 5
+    "orden": 6
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-3",
@@ -188,7 +188,7 @@
     "foto": "projects/furgoneta/tmp/images/peugeot/",
     "contacto": {},
     "potencia_cv": 100,
-    "orden": 6
+    "orden": 7
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-4",
@@ -221,7 +221,7 @@
     "foto": "projects/furgoneta/tmp/images/peugeot/",
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 12
+    "orden": 13
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-5",
@@ -254,7 +254,7 @@
     "foto": "projects/furgoneta/tmp/images/peugeot/",
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 13
+    "orden": 14
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-6",
@@ -287,7 +287,7 @@
     "foto": "projects/furgoneta/tmp/images/peugeot/",
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 14
+    "orden": 15
   },
   {
     "id": "carwow-citroen-citro-n-berlingo-furgoneta-7",
@@ -320,7 +320,7 @@
     "foto": "projects/furgoneta/tmp/images/citroen/",
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 15
+    "orden": 16
   },
   {
     "id": "carwow-opel-opel-combo-life-furgoneta-8",
@@ -353,7 +353,7 @@
     "foto": "projects/furgoneta/tmp/images/opel/",
     "contacto": {},
     "potencia_cv": 100,
-    "orden": 16
+    "orden": 17
   },
   {
     "id": "carwow-opel-opel-combo-life-furgoneta-9",
@@ -386,7 +386,7 @@
     "foto": "projects/furgoneta/tmp/images/opel/",
     "contacto": {},
     "potencia_cv": 100,
-    "orden": 17
+    "orden": 18
   },
   {
     "id": "carwow-opel-opel-combo-life-furgoneta-10",
@@ -419,7 +419,7 @@
     "foto": "projects/furgoneta/tmp/images/opel/",
     "contacto": {},
     "potencia_cv": 100,
-    "orden": 18
+    "orden": 19
   },
   {
     "id": "carwow-toyota-toyota-proace-city-verso-furgoneta-11",
@@ -452,7 +452,7 @@
     "foto": "projects/furgoneta/tmp/images/toyota/",
     "contacto": {},
     "potencia_cv": 102,
-    "orden": 19
+    "orden": 20
   },
   {
     "id": "peugeot-rifter-allure-100-manual-concesionario",
@@ -494,7 +494,7 @@
       "email": null
     },
     "potencia_cv": 100,
-    "orden": 3
+    "orden": 4
   },
   {
     "id": "spoticar-citroen-berlingo-3-shine-2055lln",
@@ -528,7 +528,7 @@
     "foto": null,
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 10
+    "orden": 11
   },
   {
     "id": "spoticar-citroen-berlingo-3-shine-1086lbv",
@@ -562,7 +562,7 @@
     "foto": null,
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 11
+    "orden": 12
   },
   {
     "id": "spoticar-peugeot-rifter-long-gt-0910mbw",
@@ -596,7 +596,7 @@
     "foto": null,
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 9
+    "orden": 10
   },
   {
     "id": "peugeot-rifter-active-pack-standard-bluehdi-73kw-2912233652",
@@ -630,7 +630,7 @@
     "foto": "projects/furgoneta/tmp/images/peugeot/peugeot-rifter-active-pack-2912233652.jpg",
     "contacto": {},
     "potencia_cv": 100,
-    "orden": 7
+    "orden": 8
   },
   {
     "id": "peugeot-rifter-allure-pack-standard-puretech-96kw-eat8-2912200324",
@@ -664,6 +664,61 @@
     "foto": "projects/furgoneta/tmp/images/peugeot/peugeot-rifter-allure-pack-2912200324.jpg",
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 8
+    "orden": 9
+  },
+  {
+    "id": "peugeot-rifter-allure-bluehdi-100-ss-6v-standard-9848044",
+    "dealerId": "peugeot-auracar-automoviles-guadalajara",
+    "sourceId": "concesionario",
+    "brandId": "peugeot",
+    "modelo": "Peugeot Rifter",
+    "motorizacion": "BlueHDi 100 S&S",
+    "cambio": "Manual 6v",
+    "acabatetapiceria": "Allure · Tejido Sixties",
+    "color": "Sirkka Green",
+    "anio": null,
+    "kms": 0,
+    "pvp": 32326.06,
+    "descuento": 8663.85,
+    "base_imponible": 19567.92,
+    "iva": 4229.22,
+    "iem": 956.61,
+    "total_contado": 25900,
+    "total_financiado": null,
+    "matriculacion": null,
+    "otros_costes": 575,
+    "opciones": [
+      {
+        "nombre": "Color M04Q Sirkka Green",
+        "precio": 415.7
+      },
+      {
+        "nombre": "Tapicería CRFX Tejido Sixties",
+        "precio": 0
+      },
+      {
+        "nombre": "Pack Style",
+        "precio": 935.32
+      },
+      {
+        "nombre": "Ayuda al estacionamiento trasero + cámara visión 180º Top Rear Vision",
+        "precio": 311.77
+      }
+    ],
+    "mantenimiento": null,
+    "enlace": null,
+    "notas": "Oferta 9848044 emitida 19/12/2025, válida hasta 31/12/2025. Emisiones CO2 141 g/km (WLTP). Garantía Peugeot Care hasta 8 años/160.000 km (según condiciones). Subtotal vehículo PVP 25.325,00 € + suplidos 575,00 € = 25.900,00 €; no cuadra con fórmula usando PVP/desc/IVA/IEM, revisar con comercial.",
+    "etiqueta": null,
+    "consumo_l_100": null,
+    "ruedas": null,
+    "caracteristicas": null,
+    "foto": null,
+    "contacto": {
+      "nombre": "Aitor López Buedo",
+      "telefono": "607452586",
+      "email": "aitor.lopez@auracar.es"
+    },
+    "potencia_cv": 100,
+    "orden": 1
   }
 ]
