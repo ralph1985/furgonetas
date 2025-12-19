@@ -118,5 +118,15 @@
     "email": "",
     "direccion": "",
     "web": ""
+  },
+  {
+    "id": "spoticar-peugeot-sy-vigo",
+    "name": "PEUGEOT S&Y Vigo (SPOTICAR)",
+    "city": "Vigo",
+    "sourceId": "spoticar",
+    "telefono": "",
+    "email": "",
+    "direccion": "",
+    "web": ""
   }
 ]

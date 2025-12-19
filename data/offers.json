@@ -221,7 +221,7 @@
     "foto": "projects/furgoneta/tmp/images/peugeot/",
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 9
+    "orden": 10
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-5",
@@ -254,7 +254,7 @@
     "foto": "projects/furgoneta/tmp/images/peugeot/",
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 10
+    "orden": 11
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-6",
@@ -287,7 +287,7 @@
     "foto": "projects/furgoneta/tmp/images/peugeot/",
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 11
+    "orden": 12
   },
   {
     "id": "carwow-citroen-citro-n-berlingo-furgoneta-7",
@@ -320,7 +320,7 @@
     "foto": "projects/furgoneta/tmp/images/citroen/",
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 12
+    "orden": 13
   },
   {
     "id": "carwow-opel-opel-combo-life-furgoneta-8",
@@ -353,7 +353,7 @@
     "foto": "projects/furgoneta/tmp/images/opel/",
     "contacto": {},
     "potencia_cv": 100,
-    "orden": 13
+    "orden": 14
   },
   {
     "id": "carwow-opel-opel-combo-life-furgoneta-9",
@@ -386,7 +386,7 @@
     "foto": "projects/furgoneta/tmp/images/opel/",
     "contacto": {},
     "potencia_cv": 100,
-    "orden": 14
+    "orden": 15
   },
   {
     "id": "carwow-opel-opel-combo-life-furgoneta-10",
@@ -419,7 +419,7 @@
     "foto": "projects/furgoneta/tmp/images/opel/",
     "contacto": {},
     "potencia_cv": 100,
-    "orden": 15
+    "orden": 16
   },
   {
     "id": "carwow-toyota-toyota-proace-city-verso-furgoneta-11",
@@ -452,7 +452,7 @@
     "foto": "projects/furgoneta/tmp/images/toyota/",
     "contacto": {},
     "potencia_cv": 102,
-    "orden": 16
+    "orden": 17
   },
   {
     "id": "peugeot-rifter-allure-100-manual-concesionario",
@@ -527,7 +527,7 @@
     "foto": null,
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 7
+    "orden": 8
   },
   {
     "id": "spoticar-citroen-berlingo-3-shine-1086lbv",
@@ -560,6 +560,39 @@
     "foto": null,
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 8
+    "orden": 9
+  },
+  {
+    "id": "spoticar-peugeot-rifter-long-gt-0910mbw",
+    "dealerId": "spoticar-peugeot-sy-vigo",
+    "sourceId": "spoticar",
+    "brandId": "peugeot",
+    "modelo": "Rifter Long",
+    "motorizacion": "BlueHDi 130 (96 kW)",
+    "cambio": "Por confirmar (manual/automático)",
+    "acabatetapiceria": "GT",
+    "color": "Blanco",
+    "kms": 59948,
+    "pvp": 23900,
+    "descuento": null,
+    "base_imponible": null,
+    "iva": null,
+    "iem": null,
+    "total_contado": 23900,
+    "total_financiado": null,
+    "matriculacion": null,
+    "otros_costes": null,
+    "opciones": [],
+    "mantenimiento": null,
+    "enlace": null,
+    "notas": "SPOTICAR, 3 años 1 mes (1ª matriculación 24/10/2022, matrícula 0910MBW). Servicio anterior particular, garantía 12 meses. Precio con impuestos incluidos; revisar desglose de IVA/IEM y si hay gastos de transferencia o entrega. Validez de oferta no indicada. Combustible diésel.",
+    "etiqueta": null,
+    "consumo_l_100": null,
+    "ruedas": null,
+    "caracteristicas": "Detector delantero de obstáculos\nVigilancia de ángulo muerto\nLuces de día con tecnología LED\nNavegador Conectado 3D TOMTOM (tráfico en tiempo real, reconocimiento de voz, 4 actualizaciones de cartografía/año de por vida con USB)\nRadio digital\nFunción Mirror Screen: Apple CarPlay + Android Auto",
+    "foto": null,
+    "contacto": {},
+    "potencia_cv": 130,
+    "orden": 7
   }
 ]
