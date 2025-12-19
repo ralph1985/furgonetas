@@ -98,5 +98,15 @@
     "email": "",
     "direccion": "Av. Carlos Sainz, 1, 28914 Leganés, Madrid, España",
     "web": "https://www.autosvelasco.com/"
+  },
+  {
+    "id": "spoticar-citroen-sy-granada",
+    "name": "CITROËN S&Y Granada (SPOTICAR)",
+    "city": "Granada",
+    "sourceId": "spoticar",
+    "telefono": "",
+    "email": "",
+    "direccion": "",
+    "web": ""
   }
 ]
