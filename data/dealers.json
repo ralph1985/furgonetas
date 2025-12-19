@@ -108,5 +108,15 @@
     "email": "",
     "direccion": "",
     "web": ""
+  },
+  {
+    "id": "spoticar-stellantis-you-almeria",
+    "name": "STELLANTIS & YOU Almería (SPOTICAR)",
+    "city": "Almería",
+    "sourceId": "spoticar",
+    "telefono": "",
+    "email": "",
+    "direccion": "",
+    "web": ""
   }
 ]
