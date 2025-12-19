@@ -221,7 +221,7 @@
     "foto": "projects/furgoneta/tmp/images/peugeot/",
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 11
+    "orden": 12
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-5",
@@ -254,7 +254,7 @@
     "foto": "projects/furgoneta/tmp/images/peugeot/",
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 12
+    "orden": 13
   },
   {
     "id": "carwow-peugeot-peugeot-rifter-furgoneta-6",
@@ -287,7 +287,7 @@
     "foto": "projects/furgoneta/tmp/images/peugeot/",
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 13
+    "orden": 14
   },
   {
     "id": "carwow-citroen-citro-n-berlingo-furgoneta-7",
@@ -320,7 +320,7 @@
     "foto": "projects/furgoneta/tmp/images/citroen/",
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 14
+    "orden": 15
   },
   {
     "id": "carwow-opel-opel-combo-life-furgoneta-8",
@@ -353,7 +353,7 @@
     "foto": "projects/furgoneta/tmp/images/opel/",
     "contacto": {},
     "potencia_cv": 100,
-    "orden": 15
+    "orden": 16
   },
   {
     "id": "carwow-opel-opel-combo-life-furgoneta-9",
@@ -386,7 +386,7 @@
     "foto": "projects/furgoneta/tmp/images/opel/",
     "contacto": {},
     "potencia_cv": 100,
-    "orden": 16
+    "orden": 17
   },
   {
     "id": "carwow-opel-opel-combo-life-furgoneta-10",
@@ -419,7 +419,7 @@
     "foto": "projects/furgoneta/tmp/images/opel/",
     "contacto": {},
     "potencia_cv": 100,
-    "orden": 17
+    "orden": 18
   },
   {
     "id": "carwow-toyota-toyota-proace-city-verso-furgoneta-11",
@@ -452,7 +452,7 @@
     "foto": "projects/furgoneta/tmp/images/toyota/",
     "contacto": {},
     "potencia_cv": 102,
-    "orden": 18
+    "orden": 19
   },
   {
     "id": "peugeot-rifter-allure-100-manual-concesionario",
@@ -528,7 +528,7 @@
     "foto": null,
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 9
+    "orden": 10
   },
   {
     "id": "spoticar-citroen-berlingo-3-shine-1086lbv",
@@ -562,7 +562,7 @@
     "foto": null,
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 10
+    "orden": 11
   },
   {
     "id": "spoticar-peugeot-rifter-long-gt-0910mbw",
@@ -596,7 +596,7 @@
     "foto": null,
     "contacto": {},
     "potencia_cv": 130,
-    "orden": 8
+    "orden": 9
   },
   {
     "id": "peugeot-rifter-active-pack-standard-bluehdi-73kw-2912233652",
@@ -631,5 +631,39 @@
     "contacto": {},
     "potencia_cv": 100,
     "orden": 7
+  },
+  {
+    "id": "peugeot-rifter-allure-pack-standard-puretech-96kw-eat8-2912200324",
+    "dealerId": "peugeot-autos-velasco-leganes",
+    "sourceId": "concesionario",
+    "brandId": "peugeot",
+    "modelo": "Peugeot Rifter",
+    "motorizacion": "PureTech 96 kW (130 CV)",
+    "cambio": "EAT8 automático",
+    "acabatetapiceria": "Allure Pack Standard",
+    "color": null,
+    "anio": 2021,
+    "kms": 89028,
+    "pvp": null,
+    "descuento": null,
+    "base_imponible": null,
+    "iva": null,
+    "iem": null,
+    "total_contado": 19495,
+    "total_financiado": 19495,
+    "matriculacion": null,
+    "otros_costes": null,
+    "opciones": [],
+    "mantenimiento": null,
+    "enlace": "https://www.grupovelasco.es/coches-ocasion/peugeot-rifter-allure-pack-standard-puretech-96kw-eat8-2912200324/",
+    "notas": "Vehículo en Leganés. Matrícula 4702LNZ. Fecha matriculación 28/04/2021. Garantía 12 meses. Precio contado/financiado iguales y sin desglose de PVP/descuento; color no indicado.",
+    "etiqueta": "C",
+    "consumo_l_100": 6.9,
+    "ruedas": "16\"; 215/65; índice H; carga 98",
+    "caracteristicas": "Monovolumen compacto, 5 puertas\nGasolina\nSensores de aparcamiento traseros con radar y cámara\nBluetooth\nAire acondicionado",
+    "foto": "projects/furgoneta/tmp/images/peugeot/peugeot-rifter-allure-pack-2912200324.jpg",
+    "contacto": {},
+    "potencia_cv": 130,
+    "orden": 8
   }
 ]
