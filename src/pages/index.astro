@@ -9,6 +9,13 @@ const hiddenCount = offers.filter((o) => o.hidden).length;
 const euro = (n?: number | null) =>
   typeof n === 'number' ? n.toLocaleString('es-ES', { style: 'currency', currency: 'EUR' }) : '—';
 
+const yearLabel = (offer) => {
+  if (!offer.anio) return '—';
+  const currentYear = new Date().getFullYear();
+  const age = Math.max(0, currentYear - offer.anio);
+  return `${offer.anio} (${age} años)`;
+};
+
 const horsepower = (offer) => {
   if (offer.potencia_cv !== null && offer.potencia_cv !== undefined) {
     return `${offer.potencia_cv} CV`;
@@ -28,6 +35,7 @@ const rows = [
   { id: 'potencia', label: 'Potencia (CV)' },
   { id: 'acabat', label: 'Acabado' },
   { id: 'color', label: 'Color' },
+  { id: 'anio', label: 'Año / antigüedad' },
   { id: 'kms', label: 'Kilómetros' },
   { id: 'total', label: 'Total contado' },
   { id: 'iva', label: 'IVA' },
@@ -107,6 +115,9 @@ const rows = [
                     {row.id === 'acabat' && offer.acabatetapiceria}
                     {row.id === 'color' && (
                       <div>{offer.color || '—'}</div>
+                    )}
+                    {row.id === 'anio' && (
+                      <div>{yearLabel(offer)}</div>
                     )}
                     {row.id === 'kms' && (
                       <div>{offer.kms ?? '—'}</div>

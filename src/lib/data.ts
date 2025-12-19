@@ -29,6 +29,7 @@ export type Offer = {
   cambio?: string;
   acabatetapiceria?: string;
   color?: string;
+  anio?: number | null;
   kms?: number | null;
   pvp?: number | null;
   descuento?: number | null;
