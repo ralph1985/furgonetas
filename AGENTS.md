@@ -33,4 +33,8 @@ Crear un gestor visual de ofertas de furgonetas para comparar y decidir compra. 
 
 ## Gestión de tareas y horas
 
-- Para este proyecto no se registran horas en `data/projects-tasks.json`; céntrate en mantener `data/offers.json` y el dashboard al día.
+- Al empezar, identifica el proyecto y usa ese nombre en `project`.
+- Busca si ya existe una tarea "En curso" para ese trabajo; si existe, registra horas y notas ahí.
+- Si no existe, crea una nueva con `npm run task:add` en el monorepo (o edita a mano manteniendo `dd/mm/aaaa`, id incremental y mínimos: `status`, `startDate`, `hours`, `project`).
+- Registra siempre la actividad en `data/projects-tasks.json` del monorepo (estado, fechas, horas, notas, proyecto).
+- Proyecto de referencia para este repo: `furgoneta`.
