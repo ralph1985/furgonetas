@@ -31,6 +31,10 @@ Crear un gestor visual de ofertas de furgonetas para comparar y decidir compra. 
 - En este proyecto (Astro): `npm install`, `npm run dev`, `npm run build`, `npm run preview`. Fuente de datos: JSON relacionales en `data/` consumidos vía `src/lib/data.ts`. Para ocultar ofertas sin usar localStorage, añade sus ids a `data/hidden.json` (la capa de datos las filtra).
 - En la raíz (si necesitas scripts comunes): `npm install`, `npm run dev | build | lint | format | test | test:e2e`, `npm run home`.
 
+## Dependency Management
+
+- Al instalar dependencias, usa versiones fijas sin el prefijo `^` en `package.json`.
+
 ## Gestión de tareas y horas
 
 - Al empezar, identifica el proyecto y usa ese nombre en `project`.
