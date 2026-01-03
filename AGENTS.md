@@ -13,7 +13,7 @@ Crear un gestor visual de ofertas de furgonetas para comparar y decidir compra. 
   - `data/dealers.json`: concesionarios (id, nombre, ciudad, sourceId).
   - `data/offers.json`: ofertas con ids de marca/dealer/source y campos económicos (`pvp`, `descuento`, `base_imponible`, `iva`, `iem`, `total_contado`, `total_financiado`, `matriculacion`, `otros_costes`, `opciones`, `color`, `kms`, `notas`, `enlace`, `mantenimiento`, etc.).
 - Fotos crudas en `projects/furgoneta/tmp/images/<marca>/` si las hubiera; enlaza la ruta en cada oferta.
-- Estilo de código: 2 espacios, comillas simples, Conventional Commits. Ejecuta `npm run format`/`npm run lint` desde la raíz cuando haya código.
+- Estilo de código: 2 espacios, comillas simples, Conventional Commits con mensajes en inglés. Ejecuta `npm run format`/`npm run lint` desde la raíz cuando haya código.
 
 ## Flujo para añadir/analizar ofertas
 
